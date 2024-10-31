@@ -92,7 +92,7 @@ const tinhThueThuNhap = () => {
         } else if (thuNhapChiuThue <= 960000000) {
             thuePhaiTra = thuNhapChiuThue  * 0.3;
         } else {
-            thuePhaiTra = thuNhapChiuThue  * 0.35;
+            thuePhaiTra = 60e+6 * 0.05 + 60e+6 * 0.1 + 90e+6 * 0.15 + 174e+6 * 0.2 + 240e+6 * 0.25 + 336e+6 * 0.3 + (thuNhapChiuThue - 960e+6) * 0.35;
         }
     }
 

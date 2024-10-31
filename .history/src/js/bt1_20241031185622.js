@@ -83,16 +83,16 @@ const tinhThueThuNhap = () => {
             thuePhaiTra = thuNhapChiuThue * 0.05;
         } else if (thuNhapChiuThue <= 120000000) {
             thuePhaiTra = thuNhapChiuThue * 0.1;
-        } else if (thuNhapChiuThue <= 210000000) {
+        } else if (thuNhapChiuThue <= 2100) {
             thuePhaiTra = thuNhapChiuThue * 0.15;
-        } else if (thuNhapChiuThue <= 384000000) {
-            thuePhaiTra = thuNhapChiuThue * 0.2;
-        } else if (thuNhapChiuThue <= 624000000) {
-            thuePhaiTra = thuNhapChiuThue  * 0.25;
-        } else if (thuNhapChiuThue <= 960000000) {
-            thuePhaiTra = thuNhapChiuThue  * 0.3;
+        } else if (thuNhapChiuThue <= 384e+6) {
+            thuePhaiTra = 60e+6 * 0.05 + 60e+6 * 0.1 + 90e+6 * 0.15 + (thuNhapChiuThue - 210e+6) * 0.2;
+        } else if (thuNhapChiuThue <= 624e+6) {
+            thuePhaiTra = 60e+6 * 0.05 + 60e+6 * 0.1 + 90e+6 * 0.15 + 174e+6 * 0.2 + (thuNhapChiuThue - 384e+6) * 0.25;
+        } else if (thuNhapChiuThue <= 960e+6) {
+            thuePhaiTra = 60e+6 * 0.05 + 60e+6 * 0.1 + 90e+6 * 0.15 + 174e+6 * 0.2 + 240e+6 * 0.25 + (thuNhapChiuThue - 624e+6) * 0.3;
         } else {
-            thuePhaiTra = thuNhapChiuThue  * 0.35;
+            thuePhaiTra = 60e+6 * 0.05 + 60e+6 * 0.1 + 90e+6 * 0.15 + 174e+6 * 0.2 + 240e+6 * 0.25 + 336e+6 * 0.3 + (thuNhapChiuThue - 960e+6) * 0.35;
         }
     }
 
